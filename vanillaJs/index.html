@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Name - Pricing Page</title> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        a
+        {
+            text-decoration: none;
+            color:black;
+        }
+        
+        .navbar .nav-item:last-child .nav-link {
+            background-color: transparent;
+            border: 1px solid #007bff; 
+            color: #007bff; 
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .navbar .nav-item:last-child .nav-link:hover {
+            background-color: #007bff; 
+            color: #fff; 
+        }
+
+        /* Custom CSS for underlining and scrolling of Features */
+        .features-list, .resources-list, .sections-list {
+            cursor: pointer;
+            text-decoration: none; 
+            color: #333; 
+        }
+        .features-list:hover, .resources-list:hover, .sections-list:hover {
+            text-decoration: underline; 
+        }
+
+        .pricing-heading {
+            text-align: center;
+            font-size: 36px; 
+            margin-top: 20px; 
+            padding: 20px 0; 
+        }
+
+        .card-title {
+            border-bottom: 2px solid #007bff; 
+            padding-bottom: 10px; 
+        }
+
+        .card {
+            max-width: 260px; 
+            margin: 0 15px; 
+            height: 350px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .free-button {
+            background-color: white; 
+            border: 2px solid #007bff; 
+            color: #007bff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            transition: background-color 0.3s, color 0.3s; /* Transition effect */
+        }
+        .free-button:hover {
+            background-color: #007bff; 
+            color: #fff;
+        }
+
+        .pricing-line {
+            border-bottom: 1px solid #ddd;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .sections-section {
+            margin-top: 50px;
+        }
+
+        .sections-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .section {
+            flex: 0 0 30%;
+        }
+
+        .nav-link-top {
+            position: relative;
+        }
+        .nav-link-top:hover::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            border-bottom: 2px solid #007bff;
+        }
+        
+        .highlighted {
+            background-color: #f2f2f2; 
+            border: 2px solid #007bff; 
+        }
+
+        .pricing-slider {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #userSlider {
+            width: 80%;
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <h5 class="my-0 mr-md-auto">Company Name</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <div class="container d-flex justify-content-between">
+            <a class="nav-link nav-link-top" href="#">Features</a>
+            <a class="nav-link nav-link-top" href="#">Enterprise</a></li>
+            <a class="nav-link nav-link-top" href="#">Support</a></li>
+            <a class="nav-link nav-link-top" href="#">Pricing</a></li>
+        </nav>
+        <a class="btn btn-outline-primary" data-toggle="modal" data-target="#myModal">Sign Up</a>
+    </div>
+    </div>
+
+    <!-- Pricing Table -->
+    <div class="container mt-5">
+        <h1 class="pricing-heading">Pricing</h1>
+    <div>
+        <div class="row pricing-options justify-content-center text-center"> 
+            <div class="card mb-4 box-shadow">
+                <!-- Pricing Card 1 -->
+                <div class="card-header">
+                    <h5 class="card-title">Free</h5>
+                </div>
+                    <div class="card-body">
+                        <h1 class="card-text"><span style="font-weight: bold;">$0</span> / <span style="font-weight: normal;">mo</span></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                          <li>10 users included</li>
+                          <li>2 GB of storage</li>
+                          <li>Email support</li>
+                          <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-outline-primary"
+                        data-toggle="modal" data-target="#myModal">Sign up for free</button>
+                        <p></p>
+                        <br>
+                    </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <!-- Pricing Card 1 -->
+                <div class="card-header">
+                    <h5 class="card-title">Pro</h5>
+                </div>
+                    <div class="card-body">
+                        <h1 class="card-text"><span style="font-weight: bold;">$15</span> / <span style="font-weight: normal;">mo</span></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                          <li>20 users included</li>
+                          <li>10 GB of storage</li>
+                          <li>Priority Email support</li>
+                          <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary"
+                        data-toggle="modal" data-target="#myModal">Get Started</button>
+                        <p></p>
+                        <br>
+                    </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <!-- Pricing Card 1 -->
+                <div class="card-header">
+                    <h5 class="card-title">Enterprise</h5>
+                </div>
+                    <div class="card-body">
+                        <h1 class="card-text"><span style="font-weight: bold;">$29</span> / <span style="font-weight: normal;">mo</span></h1>
+                        <ul class="list-unstyled mt-3 mb-4">
+                          <li>30 users included</li>
+                          <li>15 GB of storage</li>
+                          <li>Phone and Email support</li>
+                          <li>Help center access</li>
+                        </ul>
+                        <button type="button" class="btn btn-lg btn-block btn-primary"
+                        data-toggle="modal" data-target="#myModal">Contact Us</button>
+                        <p></p>
+                        <br>
+                    </div>
+            </div>
+        </div>
+        <div class="pricing-line"></div>
+
+        <!-- Pricing Slider -->
+        <div class="pricing-slider">
+            <input type="range" min="0" max="100" value="0" step="10" class="slider" id="userSlider">
+            <p>Number of Users: <span id="userCount">0</span></p>
+        </div>
+    </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+            <div class="col-6 col-md">
+            </div>
+            
+          <div class="col-6 col-md">
+            <h5>Features</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Cool stuff</a></li>
+              <li><a class="text-muted" href="#">Random feature</a></li>
+              <li><a class="text-muted" href="#">Team feature</a></li>
+              <li><a class="text-muted" href="#">Stuff for developers</a></li>
+              <li><a class="text-muted" href="#">Another one</a></li>
+              <li><a class="text-muted" href="#">Last time</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>Resources</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Resource</a></li>
+              <li><a class="text-muted" href="#">Resource name</a></li>
+              <li><a class="text-muted" href="#">Another resource</a></li>
+              <li><a class="text-muted" href="#">Final resource</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5>About</h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-muted" href="#">Team</a></li>
+              <li><a class="text-muted" href="#">Locations</a></li>
+              <li><a class="text-muted" href="#">Privacy</a></li>
+              <li><a class="text-muted" href="#">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments">Order Comments:</label>
+                            <textarea class="form-control" id="comments" required></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+    
+    <script type="text/javascript" src="path-to-your-static-folder/slick.min.js"></script>
+
+    <script>
+        // Initialize Slick Slider here
+        $(document).ready(function(){
+            $('.pricing-options').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                infinite: false,
+            });
+        });
+    </script>
+
+    <script>
+        
+        const userSlider = document.getElementById('userSlider');
+        const userCountDisplay = document.getElementById('userCount');
+        
+       
+        userSlider.addEventListener('input', function() {
+           
+            userCountDisplay.textContent = this.value;
+            
+            
+            highlightPricingPlan(this.value);
+        });
+        
+        
+        function highlightPricingPlan(userCount) {
+            const pricingCards = document.querySelectorAll('.card');
+            
+            
+            pricingCards.forEach(card => {
+                card.classList.remove('highlighted');
+            });
+            
+            // Determine which pricing plan to highlight
+            if (userCount >= 0 && userCount < 10) {
+                pricingCards[0].classList.add('highlighted');
+            } else if (userCount >= 10 && userCount < 20) {
+                pricingCards[1].classList.add('highlighted');
+            } else if (userCount >= 20) {
+                pricingCards[2].classList.add('highlighted');
+            }
+        }
+        function lazyLoad() {
+            
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                // Fetch and append more data here
+                fetchMoreData();
+            }
+        }
+
+        function fetchMoreData() {
+            const apiUrl = `https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=10`;
+
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    appendDataToPage(data);
+                    page++; 
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+        // Append data to the page
+        function appendDataToPage(data) {
+            const pricingContainer = document.querySelector('.pricing-options');
+
+            data.forEach(post => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                    <div class="card-body">
+                        <h5 class="card-title">${post.title}</h5>
+                        <p class="card-text">${post.body}</p>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Read More</button>
+                    </div>
+                `;
+                pricingContainer.appendChild(card);
+            });
+        }
+        window.addEventListener('scroll', lazyLoad);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
